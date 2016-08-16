@@ -11,7 +11,8 @@ namespace ProjectStatefulService.Interfaces
 
     public interface IProject : IService
     {
-        Task<Project> CreateEmptyProject(string projectName);
+        Task<IEnumerable<Project>> GetProjects();
         Task<Project> GetProjectById(Guid projectId);
+        Task<Project> CreateEmptyProject(string projectName);
     }
 }

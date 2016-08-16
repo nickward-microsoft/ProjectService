@@ -13,6 +13,55 @@ namespace ProjectWebService.Controllers
     [Route("api/[controller]")]
     public class ProjectController : Controller
     {
+        // GET api/project
+        [HttpGet]
+        public async Task<IEnumerable<Project>> Get()
+        {
+            IProject projectProxy = ServiceProxy.Create<IProject>(new Uri("fabric:/ProjectService/ProjectStatefulService"), new ServicePartitionKey(0));
+
+            try
+            {
+                IEnumerable<Project> projectIEnumerable = await projectProxy.GetProjects();
+                return projectIEnumerable;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        // GET api/project/5
+        [HttpGet("{id}")]
+        public async Task<Project> Get(string id)
+        {
+            Guid projectIdGuid;
+
+            if (!Guid.TryParse(id, out projectIdGuid))
+            {
+                HttpContext.Response.StatusCode = 400;
+                return null;
+            }
+
+            IProject projectProxy = ServiceProxy.Create<IProject>(new Uri("fabric:/ProjectService/ProjectStatefulService"), new ServicePartitionKey(0));
+
+            try
+            {
+                Project foundProject = await projectProxy.GetProjectById(projectIdGuid);
+                if (foundProject.Name == null)
+                {
+                    HttpContext.Response.StatusCode = 404;
+                    return null;
+                }
+                return foundProject;
+            }
+            catch (Exception e)
+            {
+                HttpContext.Response.StatusCode = 500;
+                return null;
+            }
+        }
+        
+        
         // POST api/project
         [HttpPost]
         public async Task<Project> CreateProject(string projectName)
@@ -43,35 +92,6 @@ namespace ProjectWebService.Controllers
             }
         }
 
-        // GET api/project
-        [HttpGet]
-        public async Task<Project> GetProject(string projectId)
-        {
-            Guid projectIdGuid;
-
-            if (!Guid.TryParse(projectId, out projectIdGuid))
-            {
-                HttpContext.Response.StatusCode = 400;
-                return null;
-            }
-
-            IProject projectProxy = ServiceProxy.Create<IProject>(new Uri("fabric:/ProjectService/ProjectStatefulService"), new ServicePartitionKey(0));
-
-            try
-            {
-                Project foundProject = await projectProxy.GetProjectById(projectIdGuid);
-                if(foundProject.Name == null)
-                {
-                    HttpContext.Response.StatusCode = 404;
-                    return null;
-                }
-                return foundProject;
-            }
-            catch (Exception e)
-            {
-                HttpContext.Response.StatusCode = 500;
-                return null;
-            }
-        }
+        
     }
 }
