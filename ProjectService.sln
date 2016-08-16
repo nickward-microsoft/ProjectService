@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ProjectService", "ProjectService\ProjectService.sfproj", "{0487A28E-F993-41F5-A8E2-94F6F3B020D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectStatefulService", "..\..\..\Documents\Visual Studio 2015\Projects\ProjectService\ProjectStatefulService\ProjectStatefulService.csproj", "{C79050C3-B74C-43EA-86FB-1B8B74D9E528}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0487A28E-F993-41F5-A8E2-94F6F3B020D8}.Debug|x64.ActiveCfg = Debug|x64
+		{0487A28E-F993-41F5-A8E2-94F6F3B020D8}.Debug|x64.Build.0 = Debug|x64
+		{0487A28E-F993-41F5-A8E2-94F6F3B020D8}.Debug|x64.Deploy.0 = Debug|x64
+		{0487A28E-F993-41F5-A8E2-94F6F3B020D8}.Release|x64.ActiveCfg = Release|x64
+		{0487A28E-F993-41F5-A8E2-94F6F3B020D8}.Release|x64.Build.0 = Release|x64
+		{0487A28E-F993-41F5-A8E2-94F6F3B020D8}.Release|x64.Deploy.0 = Release|x64
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Debug|x64.ActiveCfg = Debug|x64
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Debug|x64.Build.0 = Debug|x64
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|x64.ActiveCfg = Release|x64
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
