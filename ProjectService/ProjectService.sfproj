@@ -28,6 +28,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Documents\Visual Studio 2015\Projects\ProjectService\ProjectStatefulService\ProjectStatefulService.csproj" />
+    <ProjectReference Include="..\ProjectWebService\ProjectWebService.xproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <PropertyGroup>
