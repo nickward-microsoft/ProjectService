@@ -3,7 +3,7 @@
   <Parameters>
     <Parameter Name="ProjectWebService_InstanceCount" DefaultValue="-1" />
     <Parameter Name="ProjectStatefulService_MinReplicaSetSize" DefaultValue="3" />
-    <Parameter Name="ProjectStatefulService_PartitionCount" DefaultValue="1" />
+    <Parameter Name="ProjectStatefulService_PartitionCount" DefaultValue="26" />
     <Parameter Name="ProjectStatefulService_TargetReplicaSetSize" DefaultValue="3" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
@@ -30,7 +30,7 @@
     </Service>
     <Service Name="ProjectStatefulService">
       <StatefulService ServiceTypeName="ProjectStatefulServiceType" TargetReplicaSetSize="[ProjectStatefulService_TargetReplicaSetSize]" MinReplicaSetSize="[ProjectStatefulService_MinReplicaSetSize]">
-        <UniformInt64Partition PartitionCount="[ProjectStatefulService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+        <UniformInt64Partition PartitionCount="[ProjectStatefulService_PartitionCount]" LowKey="0" HighKey="25" />
       </StatefulService>
     </Service>
   </DefaultServices>
