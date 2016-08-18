@@ -243,7 +243,7 @@
               "backendAddressPool": {
                 "id": "[variables('lbPoolID0')]"
               },
-              "backendPort": 8186,
+              "backendPort": 80,
               "enableFloatingIP": false,
               "frontendIPConfiguration": {
                 "id": "[variables('lbIPConfig0')]"
