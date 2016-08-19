@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ProjectService", "ProjectService\ProjectService.sfproj", "{0487A28E-F993-41F5-A8E2-94F6F3B020D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectStatefulService", "..\..\..\Documents\Visual Studio 2015\Projects\ProjectService\ProjectStatefulService\ProjectStatefulService.csproj", "{C79050C3-B74C-43EA-86FB-1B8B74D9E528}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectStatefulService.Interfaces", "ProjectStatefulService.Interfaces\ProjectStatefulService.Interfaces.csproj", "{18A685DF-0E25-4573-B638-46A117A5E782}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectService.Models", "ProjectService.Models\ProjectService.Models.csproj", "{E7AACB20-C5EB-49B5-91FF-7F2DC570451E}"
@@ -16,6 +14,8 @@ EndProject
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ProjectServiceResourceGroup", "ProjectServiceResourceGroup\ProjectServiceResourceGroup.deployproj", "{93C17B33-A15D-4CE8-A233-952B7618E45B}"
 EndProject
 Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "ProjectService.Deploy", "ProjectService.Deploy\ProjectService.Deploy.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectStatefulService", "ProjectStatefulService\ProjectStatefulService.csproj", "{C79050C3-B74C-43EA-86FB-1B8B74D9E528}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,12 +33,6 @@ Global
 		{0487A28E-F993-41F5-A8E2-94F6F3B020D8}.Release|x64.ActiveCfg = Release|x64
 		{0487A28E-F993-41F5-A8E2-94F6F3B020D8}.Release|x64.Build.0 = Release|x64
 		{0487A28E-F993-41F5-A8E2-94F6F3B020D8}.Release|x64.Deploy.0 = Release|x64
-		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Debug|x64.ActiveCfg = Debug|x64
-		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Debug|x64.Build.0 = Debug|x64
-		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|Any CPU.ActiveCfg = Release|x64
-		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|x64.ActiveCfg = Release|x64
-		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|x64.Build.0 = Release|x64
 		{18A685DF-0E25-4573-B638-46A117A5E782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18A685DF-0E25-4573-B638-46A117A5E782}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A685DF-0E25-4573-B638-46A117A5E782}.Debug|x64.ActiveCfg = Debug|x64
@@ -79,6 +73,12 @@ Global
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|x64.ActiveCfg = Release|Any CPU
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|x64.Build.0 = Release|Any CPU
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Debug|x64.ActiveCfg = Debug|x64
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Debug|x64.Build.0 = Debug|x64
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|Any CPU.ActiveCfg = Release|x64
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|x64.ActiveCfg = Release|x64
+		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
