@@ -28,7 +28,7 @@
     <Folder Include="Templates\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Deploy-AzureServiceFabricApp.ps1" />
+    <Content Include="Deploy-AzureServiceFabricApp.ps1" />
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
