@@ -12,10 +12,12 @@ Param(
     [string] $TemplateParametersFile = 'Templates\azuredeploy.parameters.json',
     [string] $ArtifactStagingDirectory = '.',
     [string] $DSCSourceFolder = 'DSC',
-	[secureString] $adminPassword
+	[string] $adminPassword
 )
 
 Import-Module Azure -ErrorAction SilentlyContinue
+
+$secureAdminPassword = $adminPassword | ConvertTo-SecureString -AsPlainText -Force
 
 try {
     [Microsoft.Azure.Common.Authentication.AzureSession]::ClientFactory.AddUserAgent("VSAzureTools-$UI$($host.name)".replace(" ","_"), "2.9.1")
@@ -116,6 +118,6 @@ New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFile).BaseName
                                    -ResourceGroupName $ResourceGroupName `
                                    -TemplateFile $TemplateFile `
                                    -TemplateParameterFile $TemplateParametersFile `
-                                   -adminPassword $adminPassword `
+                                   -adminPassword $secureAdminPassword `
                                    @OptionalParameters `
                                    -Force -Verbose
