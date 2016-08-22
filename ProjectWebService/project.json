@@ -20,12 +20,6 @@
   "frameworks": {
     "net452": {
       "dependencies": {
-        "ProjectService.Models": {
-          "target": "project"
-        },
-        "ProjectStatefulService.Interfaces": {
-          "target": "project"
-        }
       }
     }
   },
