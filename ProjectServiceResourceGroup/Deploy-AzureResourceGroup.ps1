@@ -11,7 +11,8 @@ Param(
     [string] $TemplateFile = 'Templates\azuredeploy.json',
     [string] $TemplateParametersFile = 'Templates\azuredeploy.parameters.json',
     [string] $ArtifactStagingDirectory = '.',
-    [string] $DSCSourceFolder = 'DSC'
+    [string] $DSCSourceFolder = 'DSC',
+	[string] $adminPassword
 )
 
 Import-Module Azure -ErrorAction SilentlyContinue
@@ -115,5 +116,6 @@ New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFile).BaseName
                                    -ResourceGroupName $ResourceGroupName `
                                    -TemplateFile $TemplateFile `
                                    -TemplateParameterFile $TemplateParametersFile `
+                                   -adminPassword $adminPassword `
                                    @OptionalParameters `
                                    -Force -Verbose
