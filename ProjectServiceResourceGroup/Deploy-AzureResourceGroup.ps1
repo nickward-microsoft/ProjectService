@@ -12,7 +12,7 @@ Param(
     [string] $TemplateParametersFile = 'Templates\azuredeploy.parameters.json',
     [string] $ArtifactStagingDirectory = '.',
     [string] $DSCSourceFolder = 'DSC',
-	[string] $adminPassword
+	[secureString] $adminPassword
 )
 
 Import-Module Azure -ErrorAction SilentlyContinue
