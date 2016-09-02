@@ -15,9 +15,9 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ProjectWebService", "Projec
 		{18A685DF-0E25-4573-B638-46A117A5E782} = {18A685DF-0E25-4573-B638-46A117A5E782}
 	EndProjectSection
 EndProject
-Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ProjectServiceResourceGroup", "ProjectServiceResourceGroup\ProjectServiceResourceGroup.deployproj", "{93C17B33-A15D-4CE8-A233-952B7618E45B}"
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ProjectService.ResourceGroup", "ProjectServiceResourceGroup\ProjectService.ResourceGroup.deployproj", "{93C17B33-A15D-4CE8-A233-952B7618E45B}"
 EndProject
-Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "ProjectService.Deploy", "ProjectService.Deploy\ProjectService.Deploy.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
+Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "ProjectService.DeployApp", "ProjectService.Deploy\ProjectService.DeployApp.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectStatefulService", "ProjectStatefulService\ProjectStatefulService.csproj", "{C79050C3-B74C-43EA-86FB-1B8B74D9E528}"
 	ProjectSection(ProjectDependencies) = postProject
