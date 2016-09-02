@@ -3,16 +3,16 @@
 #Requires -Module Azure.Storage
 
 Param(
-    [string] [Parameter(Mandatory=$true)] $ResourceGroupLocation,
-    [string] $ResourceGroupName = 'ProjectService',
+    [string] [Parameter(Mandatory=$true)] $adminPassword,
+    [string] $ResourceGroupLocation = 'Australia Southeast',
+    [string] $ResourceGroupName = 'ProjectServiceRG',
     [switch] $UploadArtifacts,
     [string] $StorageAccountName,
     [string] $StorageContainerName = $ResourceGroupName.ToLowerInvariant() + '-stageartifacts',
     [string] $TemplateFile = 'Templates\azuredeploy.json',
     [string] $TemplateParametersFile = 'Templates\azuredeploy.parameters.json',
     [string] $ArtifactStagingDirectory = '.',
-    [string] $DSCSourceFolder = 'DSC',
-	[string] $adminPassword
+    [string] $DSCSourceFolder = 'DSC'	
 )
 
 Import-Module Azure -ErrorAction SilentlyContinue
