@@ -15,6 +15,8 @@ Param(
     [string] $DSCSourceFolder = 'DSC'	
 )
 
+Login-AzureRmAccount
+
 Import-Module Azure -ErrorAction SilentlyContinue
 
 $secureAdminPassword = $adminPassword | ConvertTo-SecureString -AsPlainText -Force
