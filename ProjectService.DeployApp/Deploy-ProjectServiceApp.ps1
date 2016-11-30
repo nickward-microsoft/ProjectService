@@ -6,7 +6,7 @@
 #
 # Parameter help description
 Param(
-	[string] $PackagePath = "C:\ServiceFabric\ProjectServiceType",
+	[string] $PackagePath = "C:\Users\nickward\Source\Repos\ProjectService\ProjectService\pkg\Release",
 	[string] $ServiceFabricConnectionEndpoint = "cadclustermmpnwoqqgktfk.australiasoutheast.cloudapp.azure.com:19000"
 )
 
@@ -32,7 +32,7 @@ Write-Host "done!"
 
 # Upload application package to cluster Image Store
 Write-Host "Uploading application package to the cluster image store..." -NoNewline
-$result = Copy-ServiceFabricApplicationPackage -ApplicationPackagePath $PackagePath -ImageStoreConnectionString (Get-ImageStoreConnectionStringFromClusterManifest(Get-ServiceFabricClusterManifest))
+$result = Copy-ServiceFabricApplicationPackage -ApplicationPackagePath $PackagePath -ImageStoreConnectionString (Get-ImageStoreConnectionStringFromClusterManifest(Get-ServiceFabricClusterManifest)) -Verbose
 Write-Host $result
 
 # Register the application type from the uploaded package
