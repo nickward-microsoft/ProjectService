@@ -114,6 +114,7 @@ namespace ProjectStatefulService
                         var enumerator = projectEnumerable.GetAsyncEnumerator();
                         while (await enumerator.MoveNextAsync(new CancellationToken()))
                         {
+                            // enumerator.Current.Value.Name = string.Concat(enumerator.Current.Value.Name, "!");
                             projectList.Add(enumerator.Current.Value);
                         }
                     }
