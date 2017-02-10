@@ -12,12 +12,16 @@ namespace ProjectService.SeedData
     {
         static void Main(string[] args)
         {
-            char c = new char();
+            var c = new char();
+            var projName = "";
 
             for(var i=0; i < 26; i++)
             {
                 c = Convert.ToChar(65 + i);
-                CreateProject(c.ToString() + " Project");
+                projName = c.ToString() + " Project";
+
+                Console.WriteLine("Creating project {0}...", projName);
+                CreateProject(projName);
             }
             
             Console.ReadKey();
@@ -43,9 +47,12 @@ namespace ProjectService.SeedData
 
                 response = await client.PostAsync(uri, content);
 
-                if(response.StatusCode != System.Net.HttpStatusCode.OK)
+                if(response.StatusCode != System.Net.HttpStatusCode.Created)
                 {
                     Console.WriteLine(response.ReasonPhrase);
+                } else
+                {
+                    Console.WriteLine("{0} created.", ProjectName);
                 }
             }
 
