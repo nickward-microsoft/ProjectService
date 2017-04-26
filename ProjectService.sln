@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ProjectService", "ProjectService\ProjectService.sfproj", "{0487A28E-F993-41F5-A8E2-94F6F3B020D8}"
 EndProject
@@ -20,8 +20,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectStatefulService", "P
 		{E7AACB20-C5EB-49B5-91FF-7F2DC570451E} = {E7AACB20-C5EB-49B5-91FF-7F2DC570451E}
 		{18A685DF-0E25-4573-B638-46A117A5E782} = {18A685DF-0E25-4573-B638-46A117A5E782}
 	EndProjectSection
-EndProject
-Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "ProjectService.DeployApp", "ProjectService.DeployApp\ProjectService.DeployApp.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectService.SeedData", "ProjectService.SeedData\ProjectService.SeedData.csproj", "{85E2AEA6-4384-4568-904D-11575518708B}"
 EndProject
@@ -72,14 +70,6 @@ Global
 		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|Any CPU.ActiveCfg = Release|x64
 		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|x64.ActiveCfg = Release|x64
 		{C79050C3-B74C-43EA-86FB-1B8B74D9E528}.Release|x64.Build.0 = Release|x64
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|x64.Build.0 = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|x64.ActiveCfg = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|x64.Build.0 = Release|Any CPU
 		{85E2AEA6-4384-4568-904D-11575518708B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{85E2AEA6-4384-4568-904D-11575518708B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85E2AEA6-4384-4568-904D-11575518708B}.Debug|x64.ActiveCfg = Debug|Any CPU
