@@ -466,7 +466,7 @@
               "startPort": "[variables('nt0applicationStartPort')]"
             },
             "clientConnectionEndpointPort": "[variables('nt0fabricTcpGatewayPort')]",
-            "durabilityLevel": "Bronze",
+            "durabilityLevel": "Silver",
             "ephemeralPorts": {
               "endPort": "[variables('nt0ephemeralEndPort')]",
               "startPort": "[variables('nt0ephemeralStartPort')]"
@@ -477,7 +477,7 @@
           }
         ],
         "provisioningState": "Default",
-        "reliabilityLevel": "Bronze",
+        "reliabilityLevel": "Silver",
         "vmImage": "Windows"
       },
       "tags": {
