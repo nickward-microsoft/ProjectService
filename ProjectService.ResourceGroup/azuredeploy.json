@@ -367,7 +367,7 @@
                     "clusterEndpoint": "[reference(variables('clusterName')).clusterEndpoint]",
                     "nodeTypeRef": "[variables('vmNodeType0Name')]",
                     "dataPath": "D:\\\\SvcFab",
-                    "durabilityLevel": "Bronze"
+                    "durabilityLevel": "Silver"
                   },
                   "typeHandlerVersion": "1.0"
                 }
